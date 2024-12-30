@@ -25,3 +25,18 @@
     flex-direction: column;
     align-items: center;
 }
+
+/*Post section*/
+.bio-post {
+    display: flex;
+}
+
+.bio-post-links {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.bio-post-links a {
+    margin-top: 10px;
+}
