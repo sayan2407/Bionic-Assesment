@@ -40,3 +40,23 @@
 .bio-post-links a {
     margin-top: 10px;
 }
+
+/*Article*/
+
+article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bio-articles {
+    display: flex;
+    align-items: center;
+}
+
+.bio-article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0.8rem;
+}
