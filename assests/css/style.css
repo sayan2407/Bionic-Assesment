@@ -1,16 +1,35 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: Helvetica, Arial, sans-serif; /* Default font */
+    line-height: 1.6;
+    color: #333; /* General text color */
+}
+
+p {
+    font-family: Arial, Helvetica;
 }
 
 /* Header section CSS */
 .bio-header {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
-    padding: 1.5rem;
+    /* padding: 1.5rem; */
+    background-color: #314b57;
 }
 
+.bio-header h2 {
+    font-family: 'Roboto Slab', serif; /* Heading font */
+    color: #FFF; /* Dark Blue/Green */
+    /* margin-bottom: 1rem; */
+    font-size: 1.5rem; /* Adjust as needed */
+}
 
 /*Header Services Section*/
 .bio-all-services {
@@ -18,7 +37,11 @@
     align-items: center;
     /* flex-direction: column; */
     justify-content: center;
+    gap: 2rem;
 
+}
+#bio-service-list {
+    margin-right: 1rem;
 }
 .bio-services {
     display: flex;
@@ -26,37 +49,122 @@
     align-items: center;
 }
 
+.bio-services img {
+    /* width: 50px; Adjust image size */
+    /* height: 50px; */
+    margin-bottom: 10px;
+    /* height: 100%; */
+}
+
+.bio-services p {
+    font-size: 1.1rem;
+    color: #FFF; /* White */
+    font-weight: bold;
+}
+
 /*Post section*/
+.bio-posts {
+    max-width: 1200px; /* Optional: limits width for better control */
+    margin: 0 auto; /* Centers the entire container */
+    padding: 0 1rem; /* Optional: adds padding on the left and right */
+}
+
 .bio-post {
     display: flex;
+    align-items: flex-start; /* Aligns everything from the top */
+    gap: 2rem; /* Adds space between the image and description */
+}
+
+.bio-posts h2 {
+    font-family: 'Roboto Slab', serif;
+    color: #ab3c3c;
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+    flex-basis: 100%; /* Ensures the heading takes the full width of the container */
+}
+
+.bio-post-thumbnail img {
+    width: 100%;
+    max-width: 400px; /* Maximum width for the image */
+    height: auto;
+    margin-right: 2rem; /* Space between image and description */
+}
+
+.bio-post-desc {
+    flex: 1;
 }
 
 .bio-post-links {
     display: flex;
     flex-direction: column;
+    margin-top: 2rem;
 }
 
-
 .bio-post-links a {
-    margin-top: 10px;
+    color: #ab3c3c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.bio-post-links a:hover {
+    text-decoration: underline;
 }
 
 /*Article*/
 
-article {
+/* article {
     display: flex;
     flex-direction: column;
     justify-content: center;
+} */
+article {
+    margin-top: 3rem; /* Adds top margin */
+    max-width: 1200px; /* Limits width for better control */
+    margin-left: auto; /* Centers the container */
+    margin-right: auto; /* Centers the container */
+    padding: 0 1rem; /* Optional: adds padding on left and right for better spacing */
+}
+
+article h2 {
+    font-family: 'Roboto Slab', serif;
+    color: #ab3c3c;
+    font-size: 2.5rem;
+    /* margin-bottom: 1.5rem; */
 }
 
 .bio-articles {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap; /* Ensures that flex items wrap on smaller screens */
+    gap: 2rem; /* Applies space between flex items */
 }
 
 .bio-article {
+    flex: 1 1 300px; /* Flex items will grow and shrink based on available space */
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0.8rem;
+    flex-direction: column; /* Aligns the child elements vertically */
+    gap: 1rem; /* Space between elements inside each .bio-article */
+    margin-bottom: 2rem;
+}
+
+
+.bio-article-thumbnail {
+    max-width: 100%;
+    height: auto;
+    /* border-radius: 10px; */
+}
+
+.bio-article-desc {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+.bio-article-link {
+    text-decoration: none;
+    color: #ab3c3c;
+    font-weight: bold;
+}
+
+.bio-article-link:hover {
+    text-decoration: underline;
 }
