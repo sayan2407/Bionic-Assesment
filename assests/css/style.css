@@ -79,7 +79,7 @@ p {
     font-family: 'Roboto Slab', serif;
     color: #ab3c3c;
     font-size: 2.5rem;
-    margin-bottom: 0.8rem;
+    /* margin-bottom: 0.8rem; */
     flex-basis: 100%; /* Ensures the heading takes the full width of the container */
 }
 
@@ -97,7 +97,7 @@ p {
 .bio-post-links {
     display: flex;
     flex-direction: column;
-    margin-top: 2rem;
+    margin-top: 3.5rem;
 }
 
 .bio-post-links a {
@@ -163,8 +163,97 @@ article h2 {
     text-decoration: none;
     color: #ab3c3c;
     font-weight: bold;
+    display: inline-block;  
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    width: fit-content;
+
+}
+.bio-article-link:hover {
+    background-color: #ab3c3c;
+    color: white;
+    text-decoration: none;
 }
 
 .bio-article-link:hover {
-    text-decoration: underline;
+    text-decoration: none;
+}
+
+/* Responsive Adjustments */
+@media only screen and (max-width: 1260px) {
+    .bio-header {
+        flex-direction: column; /* Stack header content vertically */
+        /* padding: 1rem; */
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .bio-header h2 {
+        font-size: 1.5rem; /* Smaller text size for medium screens */
+        text-align: center;
+    }
+
+    .bio-all-services {
+        justify-content: center;
+    }
+
+    .bio-services {
+        flex: 1 1 40%; /* Adjust flexibility of service icons */
+    }
+}
+@media only screen and (max-width: 800px) {
+ 
+    .bio-all-services {
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+    }
+
+    .bio-services p {
+        font-size: 0.9rem; /* Slightly smaller text for compact screens */
+    }
+
+    .bio-post {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .bio-post-thumbnail {
+        width: 100%;
+    }
+
+    .bio-post-thumbnail img {
+        max-width: none;
+    }
+
+    .bio-posts h2 {
+        font-size: 2rem;
+    }
+
+    article h2 {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .bio-header h2 {
+        font-size: 1.2rem; /* Font size adjusted for very small screens */
+    }
+
+    .bio-services p {
+        font-size: 0.8rem; /* Further reduced text size */
+    }
+
+    .bio-map img {
+        width: 100%;
+    }
+
+    .bio-posts h2 {
+        font-size: 1.5rem;
+    }
+
+    article h2 {
+        font-size: 1.5rem;
+    }
 }
